@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            color: #8f8fbc;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form,
+        header {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(250px, 1fr));
+            place-items: center;
+            gap: 10px;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #8f8fbc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6c6cae;
+            transform: scale(1.05);
+        }
+
+        #resulte {
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Simple Calculator</h1>
+    </header>
+    <form id="calculatorform">
+        <label for="n1">Enter first number:</label>
+        <input type="number" id="n1">
+        <small style="color: gray;">* Only the first number will be used for square & cube</small>
+        <label for="n2">Enter Second number:</label>
+        <input type="number" id="n2">
+        <div class="buttons">
+            <button id="addbutton">➕ Add</button>
+            <button id="subbutton">➖ Subtract</button>
+            <button id="mulbutton">✖️ Multiply</button>
+            <button id="divbutton">➗ Divide</button>
+            <button id="squarebutton">² Square</button>
+            <button id="cubebutton">³ Cube</button>
+            <button id="sqrtbutton">√ Square Root</button>
+            <button id="cbrtbutton">∛ Cube Root</button>
+        </div>
+        <div id="resulte">The Result: </div>
+    </form>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
